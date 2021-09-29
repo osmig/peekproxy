@@ -6,7 +6,7 @@ app.use(
       protocolRewrite: true,
       secure: false,
       changeOrigin: true,
-      target: "https://api.kth.se",
+      target: "http://localhost:9090",
       onProxyReq(proxyReq, req, res) {
         console.log("-------------------------------------")
         console.log(req.method)
@@ -20,3 +20,4 @@ app.use(
     })
 );
 app.listen(80);
+
